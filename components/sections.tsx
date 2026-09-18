@@ -1,0 +1,33 @@
+import Image from "next/image";
+import { ArrowRight, Check, Compass, Mail, Phone, Route, ShieldCheck, Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ProductCard } from "@/components/product-card";
+import { products, services, site } from "@/lib/site";
+
+export function Hero() {
+  return <section className="cerebry-grid relative overflow-hidden bg-ink text-white">
+    <div className="cerebry-pulse absolute right-[8%] top-16 size-64 rounded-full border border-brass/30" aria-hidden="true" />
+    <div className="container-page relative z-10 grid min-h-[calc(100vh-64px)] items-center gap-10 py-12 lg:grid-cols-[0.9fr_1.1fr] lg:py-16">
+      <div><p className="eyebrow text-brass">Business Solutions. Better Questions.</p><h1 className="mt-5 max-w-3xl text-5xl font-bold leading-[1.02] sm:text-6xl lg:text-7xl">Make the next move a smarter one.</h1><p className="mt-6 max-w-xl text-lg leading-8 text-white/70">CEREBRY INC is a Wyoming corporation presenting a modern platform for business solutions, strategic conversations, and commercial partnership opportunities.</p><div className="mt-8 flex flex-col gap-3 sm:flex-row"><Button href="/showcase">Explore Focus Areas <ArrowRight size={18} /></Button><Button href="/contact" variant="secondary">Start a Conversation</Button></div><div className="mt-9 grid grid-cols-3 gap-4 border-t border-white/15 pt-6 text-sm">{["Clear thinking", "Modern systems", "Partner ready"].map((item) => <div key={item} className="flex items-start gap-2 font-semibold text-white/70"><Check size={16} className="mt-0.5 shrink-0 text-brass" />{item}</div>)}</div></div>
+      <div className="relative"><div className="absolute -left-4 top-8 z-10 hidden border border-brass/40 bg-ink p-4 shadow-soft md:block"><p className="text-xs font-bold uppercase tracking-widest text-brass">Cerebry Signal</p><p className="mt-1 text-sm font-bold">Wyoming / United States</p></div><div className="absolute -bottom-4 right-4 z-10 hidden bg-brass px-4 py-3 text-xs font-bold text-ink shadow-soft md:block">THINK / CONNECT / MOVE</div><div className="overflow-hidden border border-white/15 shadow-soft"><Image src="/images/cerebry-hero.png" alt="Cerebry modern business solutions workspace" width={1680} height={1120} className="h-auto w-full" priority /></div></div>
+    </div>
+  </section>;
+}
+
+export function ProductGrid({ limit }: { limit?: number }) {
+  const items = limit ? products.slice(0, limit) : products;
+  return <section className="bg-pearl py-20"><div className="container-page"><p className="eyebrow text-wine">Focus Areas</p><h2 className="mt-3 max-w-3xl text-4xl font-bold text-ink">Modern business conversations start with a clear lens.</h2><p className="mt-4 max-w-3xl leading-7 text-ink/65">The company formation records do not prescribe a specific industry. These modular focus areas create a professional starting point for future approved services, product initiatives, and commercial partnerships.</p><div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{items.map((item) => <ProductCard key={item.name} product={item} />)}</div></div></section>;
+}
+
+export function TrustBand() {
+  const items = [{ icon: Compass, title: "Thoughtfully framed", text: "Start with the right question, the business context, and a more useful view of the opportunity." }, { icon: Route, title: "Practical paths", text: "Bring ideas, systems, partnerships, and implementation into one focused commercial conversation." }, { icon: ShieldCheck, title: "Built for credibility", text: "A search-ready public foundation designed for a professional company introduction." }];
+  return <section className="bg-brass py-14 text-ink"><div className="container-page grid gap-5 md:grid-cols-3">{items.map((item) => <div key={item.title} className="border border-ink/20 bg-white p-6"><item.icon className="text-wine" size={24} /><h3 className="mt-4 text-lg font-bold">{item.title}</h3><p className="mt-2 text-sm leading-6 text-ink/75">{item.text}</p></div>)}</div></section>;
+}
+
+export function ServicesSection() {
+  return <section className="bg-white py-20"><div className="container-page grid gap-10 md:grid-cols-[0.85fr_1.15fr] md:items-center"><div><p className="eyebrow text-wine">How We Work</p><h2 className="mt-3 text-4xl font-bold text-ink">Make room for a more useful business conversation.</h2><p className="mt-5 text-base leading-7 text-ink/70">Cerebry provides a clear public introduction for organizations and partners exploring business, systems, innovation, and commercial development opportunities.</p><Button href="/services" className="mt-7">Explore Capabilities</Button></div><div className="grid gap-3 sm:grid-cols-2">{services.map((service) => <div key={service} className="flex gap-3 border-l-2 border-brass bg-pearl p-4 text-sm font-semibold text-ink/75"><Sparkles size={18} className="mt-0.5 shrink-0 text-wine" />{service}</div>)}</div></div></section>;
+}
+
+export function ContactSection() {
+  return <section className="cerebry-grid bg-ink py-20 text-white"><div className="container-page grid gap-8 md:grid-cols-[0.85fr_1.15fr]"><div><p className="eyebrow text-brass">Contact Cerebry</p><h2 className="mt-3 text-4xl font-bold">Start with the opportunity.</h2><p className="mt-4 leading-7 text-white/70">Share the strategic question, operating need, project direction, or partnership idea you would like to explore.</p><div className="mt-7 grid gap-3 text-sm font-semibold text-white/75"><a href={`mailto:${site.email}`} className="flex items-center gap-3"><Mail size={18} className="text-brass" />{site.email}</a><a href={`tel:${site.phoneHref}`} className="flex items-center gap-3"><Phone size={18} className="text-brass" />{site.phone}</a></div></div><form className="border border-white/15 bg-white p-5 text-ink shadow-soft"><div className="grid gap-4 sm:grid-cols-2"><label className="grid gap-2 text-sm font-bold">Name<input className="focus-ring min-h-12 border border-ink/10 px-3" placeholder="Your name" /></label><label className="grid gap-2 text-sm font-bold">Business email<input className="focus-ring min-h-12 border border-ink/10 px-3" placeholder="you@company.com" /></label></div><label className="mt-4 grid gap-2 text-sm font-bold">Topic<input className="focus-ring min-h-12 border border-ink/10 px-3" placeholder="Strategy, systems, innovation, partnership..." /></label><label className="mt-4 grid gap-2 text-sm font-bold">Message<textarea className="focus-ring min-h-32 border border-ink/10 p-3" placeholder="Share the context and opportunity." /></label><Button href={`mailto:${site.email}?subject=Cerebry%20Inquiry`} className="mt-5 w-full">Send Inquiry</Button></form></div></section>;
+}
