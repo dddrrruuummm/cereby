@@ -3,7 +3,7 @@ import { ContactSection } from "@/components/sections";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Contact CEREBRY INC to discuss business solutions, strategic questions, and commercial partnerships."
+  description: "Contact Cerebry to discuss workplace learning, leadership programs, onboarding, and team capability needs."
 };
 
 export default function ContactPage() {

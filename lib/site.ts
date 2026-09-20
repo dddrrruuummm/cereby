@@ -5,26 +5,32 @@ export const site = {
   email: "info@cerebry.net",
   phone: "(307) 555-0186",
   phoneHref: "+13075550186",
-  address: { city: "Wyoming", country: "US" }
+  address: { city: "Wyoming", country: "United States" },
 };
 
 export const navItems = [
-  { label: "Home", href: "/" }, { label: "About", href: "/about" }, { label: "Capabilities", href: "/services" }, { label: "Focus Areas", href: "/showcase" }, { label: "Contact", href: "/contact" }
+  { label: "Studio", href: "/about" },
+  { label: "How We Work", href: "/services" },
+  { label: "Learning Programs", href: "/showcase" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const products = [
-  { name: "Strategy Systems", category: "Business Direction", image: "/images/strategy-systems.png", description: "A structured starting point for exploring priorities, operating questions, and the information needed for better decisions.", tags: ["Strategy", "Planning", "Clarity"] },
-  { name: "Digital Operations", category: "Connected Work", image: "/images/digital-operations.png", description: "Conversations around more connected workflows, practical system needs, and technology-enabled operations.", tags: ["Operations", "Systems", "Workflow"] },
-  { name: "Product Innovation", category: "New Possibilities", image: "/images/product-innovation.png", description: "A focused lens for product ideas, prototypes, and commercial concepts as they move from exploration toward readiness.", tags: ["Ideas", "Prototyping", "Programs"] },
-  { name: "Market Intelligence", category: "Commercial Signals", image: "/images/market-intelligence.png", description: "Market and business questions framed around signals, opportunity context, and what teams need to understand next.", tags: ["Markets", "Research", "Insight"] },
-  { name: "Growth Partnerships", category: "Partner Networks", image: "/images/growth-partnerships.png", description: "An approachable basis for commercial partnership and development conversations across organizations and markets.", tags: ["Partners", "Growth", "Collaboration"] },
-  { name: "Implementation Pathways", category: "Making Progress", image: "/images/implementation.png", description: "Practical discussion of scope, milestones, coordination, and the path from a clear brief to measured action.", tags: ["Delivery", "Roadmaps", "Progress"] },
-  { name: "Customer Experience", category: "Service Design", image: "/images/customer-experience.png", description: "A customer-centered lens for shaping service moments, touchpoints, and more thoughtful commercial experiences.", tags: ["Experience", "Service", "Design"] },
-  { name: "Data Architecture", category: "Connected Intelligence", image: "/images/data-architecture.png", description: "A practical area for exploring how information, systems, and decision pathways can work together with more clarity.", tags: ["Data", "Architecture", "Systems"] },
-  { name: "Workforce Design", category: "Organization", image: "/images/workforce-design.png", description: "A people-aware lens for organizational questions, operating models, and the ways teams coordinate meaningful work.", tags: ["Teams", "Organization", "Operations"] },
-  { name: "Future Ventures", category: "Emerging Opportunity", image: "/images/future-ventures.png", description: "A flexible place to begin conversations about new ventures, developing markets, and opportunities still taking shape.", tags: ["Ventures", "Future", "Opportunity"] }
+  { code: "01", name: "Capability Strategy", category: "Learning Direction", image: "/images/strategy-systems.png", description: "A practical learning roadmap tied to business priorities, role expectations, and measurable capability gaps.", tags: ["Discovery", "Roadmap", "Measurement"] },
+  { code: "02", name: "Digital Fluency", category: "Modern Work", image: "/images/digital-operations.png", description: "Role-relevant learning that helps teams use digital tools, data, and connected workflows with confidence.", tags: ["Digital", "Workflow", "Data"] },
+  { code: "03", name: "Innovation Labs", category: "Applied Learning", image: "/images/product-innovation.png", description: "Facilitated learning sprints that turn customer needs and new ideas into testable commercial concepts.", tags: ["Workshop", "Prototype", "Practice"] },
+  { code: "04", name: "Sales Enablement", category: "Commercial Skills", image: "/images/market-intelligence.png", description: "Market, customer, and value-conversation programs built for sales teams and commercial leaders.", tags: ["Sales", "Market", "Customer"] },
+  { code: "05", name: "Manager Essentials", category: "Leadership", image: "/images/growth-partnerships.png", description: "Practical manager development centered on feedback, priorities, coaching, and healthy team performance.", tags: ["Managers", "Coaching", "Teams"] },
+  { code: "06", name: "Onboarding Systems", category: "Employee Readiness", image: "/images/implementation.png", description: "Structured role journeys that help new employees understand the work and contribute sooner.", tags: ["Onboarding", "Role", "Readiness"] },
+  { code: "07", name: "Customer Service Academy", category: "Experience", image: "/images/customer-experience.png", description: "Scenario-based service learning shaped around real customer moments, standards, and decisions.", tags: ["Service", "Scenario", "Standards"] },
+  { code: "08", name: "Knowledge Architecture", category: "Organizational Memory", image: "/images/data-architecture.png", description: "Clear knowledge pathways, learning libraries, and role resources designed to be found and used.", tags: ["Knowledge", "Library", "Systems"] },
+  { code: "09", name: "Team Operating Design", category: "Ways of Working", image: "/images/workforce-design.png", description: "Shared practices for roles, decisions, collaboration, and the routines that keep teams aligned.", tags: ["Teams", "Roles", "Decisions"] },
+  { code: "10", name: "Future Skills Studio", category: "Workforce Foresight", image: "/images/future-ventures.png", description: "Focused exploration of emerging skills and learning priorities before they become urgent gaps.", tags: ["Future", "Skills", "Foresight"] },
 ];
 
 export const services = [
-  "Business strategy and operating discussions", "Digital workflow and systems exploration", "Product and commercial concept development", "Market and opportunity research conversations", "Partnership and growth planning", "Implementation and program coordination"
+  { step: "Listen", detail: "Business priorities, audience, moments of need, and the work people must perform." },
+  { step: "Map", detail: "Capability gaps, learning outcomes, content architecture, and measures of progress." },
+  { step: "Make", detail: "Facilitated workshops, digital modules, practice tools, guides, and manager support." },
+  { step: "Learn", detail: "Pilot, observe, refine, and build an approach that can keep improving." },
 ];

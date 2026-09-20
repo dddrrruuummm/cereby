@@ -2,26 +2,13 @@ import type { Metadata } from "next";
 import { ProductCard } from "@/components/product-card";
 import { products } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Showcase",
-  description: "Explore Cerebry focus areas across strategy, operations, innovation, market intelligence, and commercial development."
-};
+export const metadata: Metadata = { title: "Learning Programs", description: "Explore ten workplace learning and capability program directions from Cerebry." };
 
 export default function ShowcasePage() {
   return (
-    <section className="bg-white py-16">
-      <div className="container-page">
-        <p className="eyebrow text-wine">Focus Areas</p>
-        <h1 className="mt-4 max-w-3xl text-5xl font-bold leading-tight">A flexible set of lenses for modern business opportunity.</h1>
-        <p className="mt-5 max-w-2xl leading-7 text-ink/70">
-          This showcase presents strategic focus areas rather than fixed client claims. Visuals and descriptions are intentionally modular, so they can be refined around approved services, industry context, and future programs as the business develops.
-        </p>
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {products.map((product) => (
-            <ProductCard key={product.name} product={product} />
-          ))}
-        </div>
-      </div>
-    </section>
+    <main className="paper-lines bg-pearl pb-20">
+      <section className="border-b-2 border-ink bg-wine py-16 text-white"><div className="container-page grid gap-8 lg:grid-cols-[1fr_0.7fr] lg:items-end"><div><p className="eyebrow text-brass">Program Library / 01-10</p><h1 className="mt-5 font-serif text-6xl font-bold leading-[0.95] sm:text-7xl">Start with a module.<br />Build a system.</h1></div><p className="max-w-lg border-l-2 border-white/30 pl-6 leading-7 text-white/70">These program directions can stand alone or become part of a role academy, onboarding journey, leadership curriculum, or broader capability system.</p></div></section>
+      <section className="container-page pt-14"><div className="mb-10 flex flex-wrap items-center justify-between gap-3 border-b-2 border-ink pb-4 text-[10px] font-black uppercase tracking-[0.13em]"><span>Cerebry workplace learning studio</span><span>Ten program directions</span></div><div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">{products.map((product) => <ProductCard key={product.code} product={product} />)}</div></section>
+    </main>
   );
 }

@@ -2,59 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --font-sans: "Inter";
-  color-scheme: light;
-}
+:root { --font-sans: "Avenir Next", Avenir, Arial, sans-serif; color-scheme: light; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #f4f8f5; color: #071c2b; font-family: var(--font-sans); }
+* { box-sizing: border-box; }
+::selection { background: #d7ff3f; color: #071c2b; }
 
-html {
-  scroll-behavior: smooth;
-}
+.container-page { width: min(1200px, calc(100% - 32px)); margin-inline: auto; }
+.eyebrow { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.13em; text-transform: uppercase; }
+.focus-ring { outline: none; }
+.focus-ring:focus-visible { box-shadow: 0 0 0 3px rgba(13, 136, 124, 0.3); }
+.paper-lines { background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 31px, rgba(7, 28, 43, 0.11) 32px); }
+.highlight { background: linear-gradient(transparent 58%, #d7ff3f 58%); }
+.coral-note { transform: rotate(-2deg); box-shadow: 6px 7px 0 rgba(7, 28, 43, 0.18); }
 
-body {
-  background: #f4f8f5;
-  color: #071c2b;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-::selection {
-  background: #0d887c;
-  color: #fff;
-}
-
-.container-page {
-  width: min(1120px, calc(100% - 32px));
-  margin-inline: auto;
-}
-
-.eyebrow {
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-size: 0.76rem;
-  font-weight: 700;
-}
-
-.focus-ring {
-  outline: none;
-}
-
-.focus-ring:focus-visible {
-  box-shadow: 0 0 0 3px rgba(13, 136, 124, 0.28);
-}
-
-.cerebry-grid {
-  background-image: linear-gradient(rgba(215, 255, 63, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(215, 255, 63, 0.08) 1px, transparent 1px);
-  background-size: 48px 48px;
-}
-
-.cerebry-pulse {
-  animation: cerebry-pulse 5s ease-in-out infinite;
-}
-
-@keyframes cerebry-pulse {
-  0%, 100% { opacity: 0.45; transform: translateY(0); }
-  50% { opacity: 0.9; transform: translateY(-10px); }
+@media (max-width: 767px) {
+  .container-page { width: min(100% - 24px, 1200px); }
+  .coral-note { transform: none; }
 }

@@ -4,8 +4,8 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <ProductGrid />
       <TrustBand />
+      <ProductGrid limit={6} />
       <ServicesSection />
       <ContactSection />
     </>

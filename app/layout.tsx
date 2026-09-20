@@ -7,25 +7,25 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Cerebry | Business Solutions & Strategic Partnerships",
+    default: "Cerebry | Workplace Learning & Capability Design",
     template: "%s | Cerebry"
   },
-  description: "CEREBRY INC is a Wyoming corporation presenting a modern platform for business solutions, strategic conversations, and commercial partnerships.",
-  keywords: ["business solutions Wyoming", "strategic partnerships", "digital operations", "business innovation", "Cerebry Inc"],
+  description: "Cerebry designs practical workplace learning systems, role academies, leadership programs, and team capability experiences.",
+  keywords: ["workplace learning design", "corporate training programs", "leadership development", "employee onboarding", "learning strategy", "Cerebry Inc"],
   openGraph: {
-    title: "Cerebry | Business Solutions & Strategic Partnerships",
-    description: "A modern starting point for business solutions, strategic conversations, and commercial partnerships.",
+    title: "Cerebry | Workplace Learning & Capability Design",
+    description: "Practical learning systems designed around the real work people need to do.",
     url: site.url,
     siteName: site.name,
-    images: [{ url: "/images/cerebry-hero.png", width: 1680, height: 1120, alt: "Cerebry modern business solutions workspace" }],
+    images: [{ url: "/images/cerebry-learning-hero.png", width: 1536, height: 1024, alt: "Cerebry workplace learning design studio" }],
     locale: "en_US",
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cerebry | Business Solutions & Strategic Partnerships",
-    description: "A modern starting point for business solutions, strategic conversations, and commercial partnerships.",
-    images: ["/images/cerebry-hero.png"]
+    title: "Cerebry | Workplace Learning & Capability Design",
+    description: "Practical learning systems designed around the real work people need to do.",
+    images: ["/images/cerebry-learning-hero.png"]
   },
   alternates: {
     canonical: site.url
@@ -41,7 +41,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     url: site.url,
     email: site.email,
     telephone: site.phone,
-    description: "Wyoming corporation positioned for business solutions, strategic conversations, and commercial partnerships.",
+    description: "Workplace learning and capability design studio serving organizations across the United States.",
     areaServed: "United States"
   };
 
